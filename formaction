@@ -1,0 +1,66 @@
+<html>
+<head>
+  <style>
+    .form1{
+      font-size: 25px;
+    }
+    #course{
+      padding: 8px 5px;
+     align-items: center;
+    }
+  </style>
+<script>
+function validateForm() {
+  let x = document.forms["myForm"]["fname"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+  let y=document.forms["myForm"]["pass"].value;
+  let z=document.forms["myForm"]["cpass"].value;
+  if(y!=z)
+  {
+    alert("password incorrect");
+    return false;
+  }
+  let a=document.forms["myForm"]["mob"].value;
+  if(a.length!=10)
+  {
+    alert("mobile no incorrect");
+    return false;
+  }
+}
+</script>
+</head>
+<body>
+
+
+<form name="myForm" action="C:\Users\student\Downloads\action.html" onsubmit="return validateForm()" >
+  <pre>
+  <div class="form1">Name           :<input type="text" name="fname"><br><br>
+email            :<input type="email" name="email"><br><br>
+password         :<input type="password" name="pass"><br><br>
+confirm password :<input type="password" name="cpass"><br><br>
+mobile no        :<input type="number" name="mob"><br><br>
+course           :<select >
+  <option>AI  </option>
+  <option>ds </option>
+  <option>EEE</option>
+  <option>ECE</option>
+  <option>CSE</option>
+  
+  
+</select><br>
+gender          :<input type="radio" name="gender" value="male">male
+                 <input type="radio" name="gender" value="female">female
+                 <br>
+nationality     :<input type="radio" name="nationality" value="indian">Indian
+                 <input type="radio" name="nationality" value="other country">other country
+
+<input id="course" type="submit" value="Submit">
+</pre>
+  </div>
+</form>
+</body>
+</html>
+
